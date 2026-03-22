@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>المتجر | S.H.M</title>
+  <meta name="description" content="متجر أدوات صحية فاخر مع أقسام ومجموعات وعروض وسلة طلبات." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="المتجر | S.H.M" />
+  <meta property="og:description" content="متجر أدوات صحية فاخر مع أقسام ومجموعات وعروض وسلة طلبات." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-cover.svg" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="google-site-verification" content="google89cc9db4731079f1" />
+  <link rel="canonical" href="https://moadad.github.io/S.h.m/shop.html" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="subpage">
+  <header class="site-header glass">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" id="secretBrand" title="S.H.M">
+        <div class="brand-mark">شم</div>
+        <div>
+          <strong>S.H.M</strong>
+          <small>متجر الأدوات الصحية</small>
+        </div>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">الرئيسية</a>
+        <a href="services.html">الخدمات</a>
+        <a href="shop.html">المتجر</a>
+        <a href="offers.html">العروض</a>
+        <a href="before-after.html">قبل / بعد</a>
+        <a href="projects.html">المشاريع</a>
+        <a href="request.html">اطلب خدمة</a>
+        <a href="track.html">متابعة الطلب</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="cart-top-btn" id="openCartBtn" aria-label="فتح سلة الطلبات">
+          <span>🛒</span>
+          <strong id="cartCountTop">0</strong>
+        </button>
+        <button class="mobile-toggle bars-toggle" id="mobileToggle" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section hero-section interior-hero">
+      <div class="container hero-grid premium-hero-grid two-col-tight">
+        <div class="hero-copy">
+          <span class="eyebrow">المتجر</span>
+          <h1>تشكيلة احترافية من الأدوات الصحية مع أقسام واضحة وسلة طلبات سهلة</h1>
+          <p>تصفح المنتجات، أضف إلى السلة، وأكمل الطلب من داخل الموقع مع فاتورة مرتبة وتفاصيل عميل واضحة.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" type="button" id="openCartHeroBtn">افتح السلة</button>
+            <a class="btn btn-secondary" href="offers.html">العروض الحالية</a>
+          </div>
+        </div>
+        <div class="hero-stage premium-panel mini"><div class="hero-stage-image shop-stage-image"></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-head split">
+          <div><span class="eyebrow">منتجات المتجر</span><h2>تقسيمات ومجموعات فخمة للبضائع</h2></div>
+          <div class="toolbar">
+            <input id="productSearch" class="input" placeholder="ابحث عن منتج أو مجموعة..." />
+            <select id="categoryFilter" class="input select"><option value="all">كل الأقسام</option></select>
+          </div>
+        </div>
+        <div class="category-chips" id="categoryChips"></div>
+        <div class="products-grid" id="productsGrid"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer small-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>S.H.M</h3>
+        <p>خدمات سباكة صحية وكهرباء وصيانة سخانات ومتجر أدوات صحية بتصميم احترافي ومناسب للموبايل.</p>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <a href="services.html">الخدمات</a>
+        <a href="shop.html">المتجر</a>
+        <a href="offers.html">العروض</a>
+        <a href="projects.html">المشاريع</a>
+      </div>
+      <div>
+        <h4>ابدأ الآن</h4>
+        <a href="request.html">اطلب خدمة</a>
+        <a href="track.html">متابعة الطلب</a>
+        <a href="before-after.html">قبل / بعد</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="cart-floating" id="cartFloatingBtn" aria-label="سلة الطلبات">
+    <span>🛒</span>
+    <strong id="cartCountFloating">0</strong>
+  </button>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة الطلبات">
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">سلة الطلبات</span>
+        <h3>إتمام طلب البضائع</h3>
+      </div>
+      <button class="btn btn-light cart-close" id="closeCartBtn">إغلاق</button>
+    </div>
+    <div class="cart-body">
+      <div id="cartItems"></div>
+      <div class="premium-panel cart-summary-box royal-card">
+        <div class="cart-summary-row"><span>عدد المنتجات</span><strong id="cartItemsCount">0</strong></div>
+        <div class="cart-summary-row"><span>الإجمالي قبل الخصم</span><strong id="cartSubtotal">0</strong></div>
+        <div class="cart-summary-row"><span>إجمالي الخصومات</span><strong id="cartSavings">0</strong></div>
+        <div class="cart-summary-row total"><span>الإجمالي النهائي</span><strong id="cartTotal">0</strong></div>
+      </div>
+      <form id="cartCheckoutForm" class="premium-panel form-card compact cart-checkout-form royal-card">
+        <h4>بيانات العميل</h4>
+        <div class="form-row two">
+          <label><span>الاسم</span><input class="input" name="customerName" required /></label>
+          <label><span>رقم الهاتف</span><input class="input" name="customerPhone" required /></label>
+        </div>
+        <div class="form-row two">
+          <label><span>البريد الإلكتروني (اختياري)</span><input class="input" name="customerEmail" type="email" /></label>
+          <label><span>المنطقة</span><select class="input select" name="area" id="cartAreaSelect"></select></label>
+        </div>
+        <label><span>العنوان</span><input class="input" name="address" required /></label>
+        <label><span>ملاحظات الطلب</span><textarea class="input textarea" name="orderNotes" placeholder="اكتب أي تفاصيل إضافية عن الطلب"></textarea></label>
+        <button class="btn btn-primary wide" type="submit">إتمام الطلب وإصدار الفاتورة</button>
+      </form>
+    </div>
+  </aside>
+
+  <dialog id="invoiceDialog" class="invoice-dialog">
+    <div class="invoice-shell" id="invoiceShell"></div>
+    <div class="dialog-actions">
+      <button class="btn btn-secondary" id="printInvoiceBtn">طباعة الفاتورة</button>
+      <button class="btn btn-light" id="closeInvoiceBtn">إغلاق</button>
+    </div>
+  </dialog>
+
+  <script type="module" src="scripts/firebase-config.js"></script>
+  <script type="module" src="scripts/main.js"></script>
+</body></html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin.html
+Disallow: /admin-login.html
+Sitemap: https://moadad.github.io/S.h.m/sitemap.xml
