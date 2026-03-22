@@ -1,0 +1,10 @@
+export const currency = (value) => new Intl.NumberFormat('ar-EG', { style: 'currency', currency: 'EGP', maximumFractionDigits: 0 }).format(Number(value || 0));
+export const nowIso = () => new Date().toISOString();
+export const slug = (text='') => text.trim().replace(/\s+/g,'-').replace(/[^\u0600-\u06FF\w-]/g,'').toLowerCase();
+export const rand = (prefix='REQ') => `${prefix}-${Math.random().toString(36).slice(2,8).toUpperCase()}${Date.now().toString().slice(-4)}`;
+export const qs = (sel, root=document) => root.querySelector(sel);
+export const qsa = (sel, root=document) => [...root.querySelectorAll(sel)];
+export const toast = (message) => alert(message);
+export const parseJSONSafe = (value, fallback) => { try { return JSON.parse(value); } catch { return fallback; } };
+export const whatsappUrl = (number, text='') => `https://wa.me/${String(number).replace(/[^\d]/g,'')}?text=${encodeURIComponent(text)}`;
+export const socialIconMap = { facebook:'📘', instagram:'📸', tiktok:'🎵', youtube:'▶️', telegram:'✈️', x:'𝕏' };

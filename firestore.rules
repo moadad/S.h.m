@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isOwnerAdminEmail() { return signedIn() && request.auth.token.email != null && request.auth.token.email.lower() == 'admin@shm.local'; }
+    function isMainAdmin() { return signedIn() && (request.auth.uid == 'SjJVfCdj0xb4EOZ7lFjmSLQ0oy32' || isOwnerAdminEmail()); }
+    function isAdmin() {
+      return isMainAdmin() || (
+        signedIn() &&
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/admins/$(request.auth.uid)).data.active == true
+      );
+    }
+    match /settings/{doc} { allow read: if true; allow write: if isAdmin(); }
+    match /products/{doc} { allow read: if true; allow write: if isAdmin(); }
+    match /categories/{doc} { allow read: if true; allow write: if isAdmin(); }
+    match /offers/{doc} { allow read: if true; allow write: if isAdmin(); }
+    match /reviews/{doc} { allow read: if true; allow create: if true; allow update, delete: if isAdmin(); }
+    match /serviceRequests/{doc} { allow create: if true; allow read, update, delete: if isAdmin(); }
+    match /orders/{doc} { allow create: if true; allow read, update, delete: if isAdmin(); }
+    match /publicTracking/{doc} { allow create: if true; allow read: if true; allow update, delete: if isAdmin(); }
+    match /mail/{doc} { allow create: if true; allow read, update, delete: if isAdmin(); }
+    match /admins/{doc} { allow create, update: if signedIn() && request.auth.uid == doc && (isMainAdmin() || isAdmin()); allow read: if isAdmin(); allow delete: if isMainAdmin(); }
+  }
+}

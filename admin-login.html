@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>دخول الإدارة | S.H.M</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="subpage admin-surface">
+  <main class="section">
+    <div class="container narrow">
+      <form id="adminLoginForm" class="premium-panel form-card">
+        <span class="eyebrow">لوحة الإدارة المخفية</span>
+        <h1>تسجيل دخول الأدمن</h1>
+        <label><span>البريد الإلكتروني</span><input class="input" id="adminEmail" type="email" value="Admin@shm.local" autocomplete="username" required /></label>
+        <label><span>كلمة المرور</span><input class="input" id="adminPassword" type="password" placeholder="أدخل كلمة المرور" autocomplete="current-password" required /></label>
+        <button class="btn btn-primary wide" type="submit">دخول</button>
+        <p class="form-note" id="loginHelper">هذه الصفحة مخفية عن الجمهور، ويمكن إنشاء حساب الإدارة لأول مرة بنفس البريد عند أول تسجيل.</p>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="scripts/firebase-config.js"></script>
+  <script type="module" src="scripts/admin-login.js"></script>
+</body>
+</html>
