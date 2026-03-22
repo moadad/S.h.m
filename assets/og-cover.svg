@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
-  <defs><linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#08111f"/><stop offset="1" stop-color="#162742"/></linearGradient></defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <circle cx="980" cy="120" r="140" fill="#d6a24a" opacity=".14"/>
-  <text x="100" y="240" fill="#ffd994" font-family="Cairo, sans-serif" font-size="34" font-weight="700">شركة خدمات حرفية ومتجر أدوات صحية</text>
-  <text x="100" y="340" fill="#ffffff" font-family="Cairo, sans-serif" font-size="72" font-weight="900">S.H.M</text>
-  <text x="100" y="430" fill="#dbe7ff" font-family="Cairo, sans-serif" font-size="44" font-weight="600">سباكة • كهرباء • صيانة سخانات • عروض</text>
-</svg>
